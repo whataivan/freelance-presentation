@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import css from "./About.module.css";
+import { useEffect, useState } from 'react';
+import css from './About.module.css';
 
 export const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState('');
   const [imageClass, setImageClass] = useState(0);
   useEffect(() => {
     switchClassName();
@@ -39,7 +39,7 @@ export const About = () => {
         resultClass = css.leftSide;
         break;
       case 1:
-        resultClass =  css.leftSideFirst;
+        resultClass = css.leftSideFirst;
         break;
       case 2:
         resultClass = css.leftSideTwo;
@@ -53,19 +53,19 @@ export const About = () => {
       default:
         break;
     }
-    return resultClass
+    return resultClass;
   };
   const textArr = [
-    "Bystro sdalayu eptaaaaaaaaaaaaa",
-    "Kachestvenno sdalayu eptaaaaaaaaaaaaa",
-    "Deshevo sdalayu eptaaaaaaaaaaaaa",
-    "Krasyvo sdalayu eptaaaaaaaaaaaaa",
+    'Быстро реализую вашу задумку, в отличии от крупных компаний, в моей работе отсутствуюет бюрократия, решение не проходит несколько этапов, чтобы попасть в точку назначения и быть реализованым. Нужно что-то поменять? Просто напишите мне и в скором времени будет готово.',
+    'Все основные задачи, и так же мелочи будут реализованы в точном соответствии с вашим запросом. Опыт решения разнообразных задач  позволит мне решать ваши поставленные цели, в соответствии с актуальными трендами разработки. Проект пишется структурированно и семантично, это позволит в случае необходимости расширить функционал, ведь структура и код максимально понятны.',
+    'Мне не приходится платить большому количеству разработчиков и другого персонала при разработке вашего продукта. Поэтому цена в несколько раз ниже рыночной. Напрмер, одностраничный сайт в любой веб студии будет стоить, самый минимум, от 300 usd, в моей случае это обойдется 100-150 usd, я уже не говорю про экономию на более крупных проетах.  ',
+    'Сделаю "Вау" еффект, взаимодействие с сайтом, плавные переходы, анимации и оформление заставят вашего клиента остаться там подольше и оставить заявку. Подберу картинки и декоративные элементы оформления под тематику вашего продукта. В конечном итогк ваш сайт будет выглядеть красиво и гармонично. ',
   ];
   const content = [
-    { title: "Быстро", id: 1 },
-    { title: "Качественно", id: 2 },
-    { title: "Дешево", id: 3 },
-    { title: "Красиво", id: 4 },
+    { title: 'Быстро', id: 1 },
+    { title: 'Качественно', id: 2 },
+    { title: 'Дешево', id: 3 },
+    { title: 'Красиво', id: 4 },
   ];
 
   return (
@@ -76,12 +76,12 @@ export const About = () => {
             <p
               onMouseLeave={() => {
                 setCurrentIndex(0);
-                setCurrentText("");
-                setImageClass(0)
+                setCurrentText('');
+                setImageClass(0);
               }}
               key={id}
               onMouseMove={() => {
-                setImageClass(id)
+                setImageClass(id);
                 setCurrentIndex(id);
                 setCurrentText(textArr[id - 1]);
               }}

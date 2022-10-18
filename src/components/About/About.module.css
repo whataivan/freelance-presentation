@@ -163,7 +163,11 @@ height: 100%;
   opacity: 1;
 }
 .rightSideText {
-  color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+  font-weight:500;
+  font-size: 18px;
+  width: 400px;
+  color: white;
   transition: all 0.3s linear;
 }
 @keyframes border {

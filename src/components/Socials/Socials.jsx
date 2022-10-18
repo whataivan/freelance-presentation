@@ -30,7 +30,7 @@ export const Socials = () => {
           </a>
         </li>
       </ul>
-      <a className={css.tel} href="+380937208010" type="tel">
+      <a className={css.tel} href="tel:+380937208010" type="tel">
         +380 93 720 80 10
       </a>
     </div>

@@ -1,4 +1,7 @@
 .header{
+    display: flex;
+    align-items: center;
+padding: 0 25px;
     position: fixed;
     top:0;
     width: 100%;
@@ -8,4 +11,11 @@
     z-index: 100;
     box-shadow: 0 0 5px 0px white;
 
+}
+.logo{
+    font-family: Russo One;
+    font-family: Orbitron;
+    letter-spacing: 0.05em;
+    color: white;
+    font-weight: 100;
 }
