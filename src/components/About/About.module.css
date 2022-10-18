@@ -1,7 +1,7 @@
 .container {
   display: flex;
   background-color: #a64444;
-  width: 100vw;
+ 
   height: 100vh;
   padding: 0;
   transition: all 0.4s linear;
@@ -9,7 +9,7 @@
 .containerFirst {
   display: flex;
   transition: all 0.2s linear;
-  width: 100vw;
+  
   height: 100vh;
 
   transition: all 0.4s linear;
@@ -18,7 +18,7 @@
 .containerTwo {
   display: flex;
   transition: all 0.2s linear;
-  width: 100vw;
+  
   height: 100vh;
 
   transition: all 0.4s linear;
@@ -27,16 +27,16 @@
 .containerThree {
   display: flex;
   transition: all 0.2s linear;
-  width: 100vw;
+  
   height: 100vh;
 
   transition: all 0.4s linear;
-  background-color: #ff3822;
+  background-color: #c03f6e;
 }
 .containerFour {
   display: flex;
   transition: all 0.2s linear;
-  width: 100vw;
+  
   height: 100vh;
 
   transition: all 0.4s linear;
@@ -44,7 +44,7 @@
 }
 .leftSide {
   height: 100%;
-  width: 50%;
+  /* width: 50%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,7 +77,7 @@
   flex-direction: column;
   justify-content: center;
 
-  background-size: cover;
+  
   padding-left: 50px;
   background: linear-gradient(
       to left,
@@ -85,6 +85,7 @@
       rgba(55, 175, 157, 0.8)
     ),
     url(../../images/aqua.JPG);
+    background-size: cover;
 }
 .leftSideThree {
   height: 100%;
@@ -93,14 +94,15 @@
   flex-direction: column;
   justify-content: center;
 
-  background-size: cover;
+  
   padding-left: 50px;
   background: linear-gradient(
       to left,
-      rgba(255, 56, 34, 0.8),
-      rgba(255, 56, 34, 0.8)
+      rgba(192, 63, 110, 0.8),
+      rgba(192, 63, 110, 0.8)
     ),
     url(../../images/bas2.JPG);
+    background-size: cover;
 }
 .leftSideFour {
   height: 100%;

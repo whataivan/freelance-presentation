@@ -1,0 +1,9 @@
+.socials{
+    font-family: 'Courier New', Courier, monospace;
+    transform: rotate(-90deg);
+    position: fixed;
+    bottom: 150px;
+    right: -40px;
+    color: rgb(236, 206, 206);
+    /* letter-spacing: 0.15em; */
+}
