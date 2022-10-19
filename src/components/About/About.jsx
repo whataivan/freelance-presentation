@@ -85,7 +85,8 @@ export const About = ({yOffset}) => {
   
   return (
     // <Parallax></Parallax>
-    <div style={{ transform:`translateY(-${yOffset/50}vh)`,overflow:'hidden' }}  className={switchClassName()}>
+    //style={{ transform:`translateY(-${yOffset/10}vh)`,overflow:'hidden' }}
+    <div   className={switchClassName()}>
       <div className={switchImageClass()}> 
         {content.map(({ title, id }) => {
           return (
@@ -94,11 +95,11 @@ export const About = ({yOffset}) => {
             data-aos-delay={String(delay+=75)}
             data-aos-duration="700"
               
-              // onMouseLeave={() => {
-              //   setCurrentIndex(0);
-              //   setCurrentText('');
-              //   setImageClass(0);
-              // }}
+              onMouseLeave={() => {
+                setCurrentIndex(0);
+                setCurrentText('');
+                setImageClass(0);
+              }}
               key={id}
               onMouseMove={() => {
                 setImageClass(id);

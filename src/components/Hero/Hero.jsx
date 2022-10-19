@@ -1,6 +1,6 @@
 import css from './Hero.module.css';
 
-export const Hero = () => {
+export const Hero = ({yOffset}) => {
   return (
     <div style={{ backgroundColor: '#000' }} className={css.hero}>
       <div className={css.topSide}>

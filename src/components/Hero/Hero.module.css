@@ -18,7 +18,7 @@ height: 50vh;
 .title{
     position: absolute;
     top: 250px;
-    left: 250px;
+    left: 190px;
     
     font-size: 130px;
     font-family: Orbitron;
@@ -29,7 +29,7 @@ height: 50vh;
 .subTitle{
     position: absolute;
     top: 275px;
-    right: 200px;
+    right: 175px;
     font-size: 110px;
     
     font-family: Orbitron;

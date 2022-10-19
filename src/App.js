@@ -25,13 +25,13 @@ export function App() {
 
   return (
     <div className='container'>
-      <Header />
-      <Hero />
+      <Header yOffset={yOffset} />
+      <Hero yOffset={yOffset} />
       <About yOffset={yOffset} />
 
-      <About />
+      <About yOffset={yOffset}  />
 
-      <Socials />
+      <Socials yOffset={yOffset}  />
 
     </div>
   );

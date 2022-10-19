@@ -1,6 +1,6 @@
 import css from './Socials.module.css';
 import svg from '../../images/symbol-defs.svg';
-export const Socials = () => {
+export const Socials = ({yOffset}) => {
   return (
     <div
       className={css.socials}
@@ -13,7 +13,7 @@ export const Socials = () => {
         <li className={css.item}>
           {' '}
           <a className={css.link} href="https://www.instagram.com/whataivan/">
-            <svg className={css.icon}>
+            <svg style={{ fill:yOffset<615? '#e3d324':'white' }} className={css.icon}>
               <use href={`${svg}#icon-instagram`} />
             </svg>
           </a>
@@ -21,7 +21,7 @@ export const Socials = () => {
         <li className={css.item}>
           {' '}
           <a className={css.link} href="https://www.instagram.com/whataivan/">
-            <svg className={css.icon}>
+            <svg style={{ fill:yOffset<515? '#e3d324':'white' }} className={css.icon}>
               <use href={`${svg}#icon-telegram`} />
             </svg>
           </a>
@@ -29,7 +29,7 @@ export const Socials = () => {
         <li className={css.item}>
           {' '}
           <a className={css.link} href="https://www.instagram.com/whataivan/">
-            <svg className={css.icon}>
+            <svg style={{ fill:yOffset<415? '#e3d324':'white' }} className={css.icon}>
               <use href={`${svg}#icon-github`} />
             </svg>
           </a>
