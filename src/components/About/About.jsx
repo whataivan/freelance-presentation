@@ -3,7 +3,7 @@ import css from './About.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
-import { Parallax } from 'react-parallax'
+// import { Parallax } from 'react-parallax'
 
 
 export const About = ({yOffset}) => {
@@ -16,8 +16,9 @@ export const About = ({yOffset}) => {
   useEffect(() => {
     switchClassName();
     
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex, yOffset]);
  
   let delay = 0;

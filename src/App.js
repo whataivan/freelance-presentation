@@ -4,7 +4,7 @@ import './App.css';
 import { Header } from 'components/Header/Header';
 import { Socials } from 'components/Socials/Socials';
 import { Hero } from 'components/Hero/Hero';
-import { useSpring, animated } from 'react-spring'
+// import { useSpring, animated } from 'react-spring'
 import { useEffect, useState } from 'react';
 // import { Parallax } from 'react-parallax'
 // import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
@@ -17,7 +17,7 @@ export function App() {
   const onScroll = (e) => {
     SetYOffset(e.currentTarget.pageYOffset)
   }
-  
+
   useEffect(() => {
     window.addEventListener('scroll', onScroll)
     return () => (window.removeEventListener('scroll', onScroll))
