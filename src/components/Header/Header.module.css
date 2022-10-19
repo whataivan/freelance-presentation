@@ -60,5 +60,29 @@ padding: 0 25px;
     left: -45px;
     width: 40px;
     height: 40px;
-    fill: aliceblue;
+    /* fill: aliceblue; */
+    animation-name: switchColor;
+  animation-delay: 0s;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
+}
+
+@keyframes switchColor {
+    0%{
+        fill: rgb(106, 106, 242);
+    }
+    25%{
+        fill: yellow; 
+    }
+    50%{
+      fill: rgb(78, 204, 78);  
+    }
+    75%{
+        
+        fill: rgb(254, 76, 76); 
+    }
+    100%{
+        fill: rgb(106, 106, 242);
+    }
 }

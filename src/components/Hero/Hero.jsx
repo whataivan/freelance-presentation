@@ -7,15 +7,18 @@ export const Hero = ({yOffset}) => {
         <h1
           data-aos="fade-top"
         //   data-aos-delay={500}
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           className={css.title}
+          style={{ transform: yOffset>50?`translateX(-700px)`:`translateX(0)` }}
+          // style={{ transform: `translateX(-${yOffset}px) `,  }}
         >
           Ivan Pikun
         </h1>
         <h2
-          data-aos="fade-top"
-        //   data-aos-delay={500}
-          data-aos-duration="2000"
+        style={{ transform: yOffset>50?`translateX(700px)`:`translateX(0)` }} 
+          data-aos="fade-right"
+       
+          data-aos-duration="1000"
           className={css.subTitle}
         >
           Web-developer

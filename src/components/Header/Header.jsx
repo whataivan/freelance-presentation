@@ -7,8 +7,8 @@ export const Header = ({yOffset}) => {
   return (
     <div style={ yOffset>800?{ backdropFilter: "blur(5px)",  }:{background: '#3f3c3c', } } className={css.header}>
       <a href="./" className={css.logo}>
-      <svg width={50} height={50}  className={css.icon}>
-              <use href={`${svg}#icon-human`} />
+      <svg  className={css.icon}>
+              <use href={`${svg}#icon-head`} />
             </svg>
         Ivan Pikun
       </a>

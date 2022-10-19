@@ -92,7 +92,7 @@ export const About = ({yOffset}) => {
           return (
             <p data-aos="fade-right"
             data-aos-anchor-placement="bottom-bottom"
-            data-aos-delay={String(delay+=75)}
+            data-aos-delay={id*100}
             data-aos-duration="700"
               
               onMouseLeave={() => {

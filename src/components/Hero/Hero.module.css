@@ -7,6 +7,7 @@
     justify-content: center;
     background-image: url('../../images/back_gray.jpg');
     background-size: cover;
+    overflow: hidden
 }
 .topSide{
     display: flex;
@@ -14,12 +15,13 @@
     /* justify-content: space-evenly; */
 width: 100vw;
 height: 50vh;
+/* overflow: hidden; */
 }
 .title{
     position: absolute;
     top: 200px;
     left: 225px;
-    
+    transition: all 0.5s ease-out;
     font-size: 130px;
     font-family: Orbitron;
     font-family: Caveat;
@@ -31,7 +33,7 @@ height: 50vh;
     top: 225px;
     right: 150px;
     font-size: 110px;
-    
+    transition: all 0.3s ease-in;
     font-family: Orbitron;
     font-family: Caveat;
     color: #e3d324;
