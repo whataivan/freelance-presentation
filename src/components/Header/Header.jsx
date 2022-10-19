@@ -2,11 +2,11 @@ import css from './Header.module.css';
 
 export const Header = ({yOffset}) => {
   return (
-    <div style={ yOffset>950?{ backdropFilter: "blur(5px)"}:{background: '#3f3c3c'} } className={css.header}>
+    <div style={ yOffset>800?{ backdropFilter: "blur(5px)"}:{background: '#3f3c3c'} } className={css.header}>
       <a href="./" className={css.logo}>
         Ivan Pikun
       </a>
-      <ul style={{ color:yOffset<1000? '#e3d324':'white' }} className={css.list}>
+      <ul style={{ color:yOffset<700? '#e3d324':'white' }} className={css.list}>
         <li className={css.item}>
           {' '}
           
