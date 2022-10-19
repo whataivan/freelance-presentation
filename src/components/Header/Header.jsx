@@ -1,12 +1,18 @@
 import css from './Header.module.css';
+import svg from '../../images/symbol-defs.svg';
+
+
 
 export const Header = ({yOffset}) => {
   return (
-    <div style={ yOffset>800?{ backdropFilter: "blur(5px)"}:{background: '#3f3c3c'} } className={css.header}>
+    <div style={ yOffset>800?{ backdropFilter: "blur(5px)",  }:{background: '#3f3c3c', } } className={css.header}>
       <a href="./" className={css.logo}>
+      <svg width={50} height={50}  className={css.icon}>
+              <use href={`${svg}#icon-human`} />
+            </svg>
         Ivan Pikun
       </a>
-      <ul style={{ color:yOffset<700? '#e3d324':'white' }} className={css.list}>
+      <ul style={{ color:yOffset<800? '#e3d324':'white' }} className={css.list}>
         <li className={css.item}>
           {' '}
           
