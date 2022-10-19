@@ -1,14 +1,30 @@
 import { useEffect, useState } from 'react';
 import css from './About.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+import { Parallax } from 'react-parallax'
+
 
 export const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [imageClass, setImageClass] = useState(0);
+  const[yOffset, SetYOffset] =useState(0)
+  console.log(yOffset);
+  const onScroll=(e)=>{
+    SetYOffset(e.currentTarget.pageYOffset)
+    
+  }
   useEffect(() => {
     switchClassName();
+    window.addEventListener('scroll', onScroll)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentIndex]);
+    return(window.removeEventListener('scroll', onScroll))
+  }, [currentIndex, yOffset]);
+ 
+  let delay = 0;
+  console.log(delay);
   const switchClassName = () => {
     let resultClass;
     switch (currentIndex) {
@@ -58,8 +74,8 @@ export const About = () => {
   const textArr = [
     'Быстро реализую вашу задумку, в отличии от крупных компаний, в моей работе отсутствуюет бюрократия, решение не проходит несколько этапов, чтобы попасть в точку назначения и быть реализованым. Нужно что-то поменять? Просто напишите мне и в скором времени будет готово.',
     'Все основные задачи, и так же мелочи будут реализованы в точном соответствии с вашим запросом. Опыт решения разнообразных задач  позволит мне решать ваши поставленные цели, в соответствии с актуальными трендами разработки. Проект пишется структурированно и семантично, это позволит в случае необходимости расширить функционал, ведь структура и код максимально понятны.',
-    'Мне не приходится платить большому количеству разработчиков и другого персонала при разработке вашего продукта. Поэтому цена в несколько раз ниже рыночной. Напрмер, одностраничный сайт в любой веб студии будет стоить, самый минимум, от 300 usd, в моей случае это обойдется 100-150 usd, я уже не говорю про экономию на более крупных проетах.  ',
-    'Сделаю "Вау" еффект, взаимодействие с сайтом, плавные переходы, анимации и оформление заставят вашего клиента остаться там подольше и оставить заявку. Подберу картинки и декоративные элементы оформления под тематику вашего продукта. В конечном итогк ваш сайт будет выглядеть красиво и гармонично. ',
+    'Мне не приходится платить большому количеству разработчиков и другого персонала при разработке вашего продукта. Поэтому цена в несколько раз ниже рыночной. Напрмер, одностраничный сайт в любой веб студии будет стоить, самый минимум, от 300 usd, в моем случае это обойдется 100-150 usd, я уже не говорю про экономию на более крупных проектах.  ',
+    'Сделаю "Вау" еффект, взаимодействие с сайтом, плавные переходы, анимации и оформление заставят вашего клиента остаться подольше и оставить заявку. Подберу картинки и декоративные элементы оформления под тематику вашего продукта. В конечном итоге ваш сайт будет выглядеть красиво и гармонично. ',
   ];
   const content = [
     { title: 'Быстро', id: 1 },
@@ -67,18 +83,24 @@ export const About = () => {
     { title: 'Дешево', id: 3 },
     { title: 'Красиво', id: 4 },
   ];
-
+  AOS.init();
+  
   return (
-    <div className={switchClassName()}>
-      <div className={switchImageClass()}>
+    // <Parallax></Parallax>
+    <div style={{ transform:`translateY(-${yOffset/50}vh)`,overflow:'hidden' }}  className={switchClassName()}>
+      <div className={switchImageClass()}> 
         {content.map(({ title, id }) => {
           return (
-            <p
-              onMouseLeave={() => {
-                setCurrentIndex(0);
-                setCurrentText('');
-                setImageClass(0);
-              }}
+            <p data-aos="fade-right"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-delay={String(delay+=75)}
+            data-aos-duration="700"
+              
+              // onMouseLeave={() => {
+              //   setCurrentIndex(0);
+              //   setCurrentText('');
+              //   setImageClass(0);
+              // }}
               key={id}
               onMouseMove={() => {
                 setImageClass(id);

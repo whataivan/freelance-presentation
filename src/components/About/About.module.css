@@ -1,7 +1,7 @@
 .container {
   display: flex;
   background-color: #a64444;
- 
+  overflow: 'scroll';
   height: 100vh;
   padding: 0;
   transition: all 0.4s linear;
@@ -9,7 +9,7 @@
 .containerFirst {
   display: flex;
   transition: all 0.2s linear;
-  
+  overflow: 'scroll';
   height: 100vh;
 
   transition: all 0.4s linear;
@@ -18,7 +18,7 @@
 .containerTwo {
   display: flex;
   transition: all 0.2s linear;
-  
+  overflow: 'scroll';
   height: 100vh;
 
   transition: all 0.4s linear;
@@ -27,7 +27,7 @@
 .containerThree {
   display: flex;
   transition: all 0.2s linear;
-  
+  overflow: 'scroll';
   height: 100vh;
 
   transition: all 0.4s linear;
@@ -36,15 +36,16 @@
 .containerFour {
   display: flex;
   transition: all 0.2s linear;
-  
+  overflow: 'scroll';
   height: 100vh;
 
   transition: all 0.4s linear;
   background-color: #c6c47a;
 }
 .leftSide {
-  height: 100%;
-  /* width: 50%; */
+  height: 100vh;
+  width: 50vw;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,8 +55,8 @@
  
 }
 .leftSideFirst {
-  height: 100%;
-  width: 50%;
+  height: 100vh;
+  width: 52vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,8 +72,8 @@
     background-size: cover;
 }
 .leftSideTwo {
-  height: 100%;
-  width: 50%;
+  height: 100vh;
+  width: 52vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,8 +89,8 @@
     background-size: cover;
 }
 .leftSideThree {
-  height: 100%;
-  width: 50%;
+  height: 100vh;
+  width: 52vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,8 +106,8 @@
     background-size: cover;
 }
 .leftSideFour {
-  height: 100%;
-  width: 50%;
+  height: 100vh;
+  width: 52vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,14 +153,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 48vw;
 height: 100%;
 
 }
 .rightSideFirst {
   height: 100%;
   background: url(../../images/air.JPG);
- 
+  width: 48vw;
   opacity: 1;
 }
 .rightSideText {

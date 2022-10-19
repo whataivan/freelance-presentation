@@ -2,8 +2,13 @@ import css from './Socials.module.css';
 import svg from '../../images/symbol-defs.svg';
 export const Socials = () => {
   return (
-    <div className={css.socials}>
-      
+    <div
+      className={css.socials}
+      data-aos="fade-left"
+      // data-aos-anchor-placement="bottom-bottom"
+      data-aos-delay={500}
+      data-aos-duration="1200"
+    >
       <ul className={css.list}>
         <li className={css.item}>
           {' '}
