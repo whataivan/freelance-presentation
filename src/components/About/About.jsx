@@ -6,21 +6,18 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { Parallax } from 'react-parallax'
 
 
-export const About = () => {
+export const About = ({yOffset}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [imageClass, setImageClass] = useState(0);
-  const[yOffset, SetYOffset] =useState(0)
-  console.log(yOffset);
-  const onScroll=(e)=>{
-    SetYOffset(e.currentTarget.pageYOffset)
-    
-  }
+  
+  
+  
   useEffect(() => {
     switchClassName();
-    window.addEventListener('scroll', onScroll)
+    
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    return(window.removeEventListener('scroll', onScroll))
+    
   }, [currentIndex, yOffset]);
  
   let delay = 0;
