@@ -12,12 +12,13 @@
   /* z-index: -1; */
 }
 .video {
+  
   position: absolute;
   top: 0;
   left: 0;
   background-attachment: fixed;
-  width: inherit;
-  height: auto;
+  width: 100%;
+  /* height: auto; */
   z-index: 1;
 }
 .leftSide {
@@ -37,20 +38,22 @@
   position: absolute;
   top: 150px;
   right: 100px;
+  backdrop-filter: blur(45px);
   background-attachment: fixed;
-
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+/* border: 1px solid black; */
   height: 75vh;
   width: 50vw;
   /* background-image: url('https://images.unsplash.com/photo-1634154369165-cadcd9af7100?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=741&q=80'); */
   /* background-color: rgb(99, 74, 74); */
-  background: linear-gradient(to left top, rgb(30, 30, 29), rgb(49, 79, 179));
+  /* background: linear-gradient(to left top, rgb(30, 30, 29), rgb(49, 79, 179)); */
   background-size: cover;
 }
 .title {
   z-index: 5;
   position: absolute;
   top: 200px;
-  left: 190px;
+  left: 135px;
   transition: all 0.5s ease-out;
   font-size: 130px;
   font-family: Orbitron;
@@ -60,12 +63,12 @@
 .subTitle {
   z-index: 5;
   position: absolute;
-  top: 350px;
-  right: 150px;
+  top: 400px;
+  left: 110px;
   font-size: 90px;
   transition: all 0.3s ease-in;
   font-family: Orbitron;
-  font-family: Caveat;
-  color: #e3d324;
+  /* font-family: Caveat; */
+  color: #c9b374;
 }
 
