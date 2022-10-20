@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   /* width: 100vw; */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   height: 100vh;
   display: flex;
   align-items: flex-start;
@@ -9,6 +9,7 @@
   /* background-image: url('../../images/back_gray.jpg'); */
   background-size: cover;
   overflow: hidden;
+  background-color: #a64444;
   /* z-index: -1; */
 }
 .video {
@@ -16,8 +17,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-attachment: fixed;
-  width: 100vw;
+  /* background-attachment: fixed; */
+  /* width: 100vw; */
   height: 100%;
   z-index: 1;
 }
