@@ -202,12 +202,12 @@
 }
 @keyframes cursor {
   0% {
-    top: 200px;
+    top: 40%;
     left: 500px;
   }
 
   100% {
-    top: 270px;
+    top: 40%;
     left: 375px;
   }
 }

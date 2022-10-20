@@ -1,10 +1,38 @@
 import css from './Hero.module.css';
-
+import { Socials } from 'components/Socials/Socials';
+import { useEffect, useRef } from 'react';
+// import video from '../../video/video.mp4'
+import videoTwo from '../../video/video2.mp4'
+// import videoVawes from '../../video/video_vawes.mp4'
 export const Hero = ({yOffset}) => {
+  const vidRef = useRef(null);
+  
+  const handlePlayVideo = () => {
+    vidRef.current.play();
+  };
+  
+  useEffect(() => {
+    handlePlayVideo()
+  }, []);
+
+
+
+
   return (
     // style={{ opacity: 100/yOffset}}
     <div  className={css.hero}>
-      <div className={css.topSide}>
+    <video src={videoTwo} ref={vidRef}  onClick={handlePlayVideo} type="video/mp4" className={css.video} autoplay muted loop id="myVideo">
+       </video>
+      <div className={css.leftSide}>
+     
+
+
+  
+
+      </div>
+      <div className={css.rightSide}>
+      <Socials yOffset={yOffset}  />
+      </div>
         <h1
           data-aos="fade-top"
         //   data-aos-delay={500}
@@ -24,10 +52,10 @@ export const Hero = ({yOffset}) => {
         >
           Web-developer
         </h2>
-      </div>
+      
       <div className={css.bottomSide}>
         <div>Получить консултацию</div>
       </div>
-    </div>
+      </div>
   );
 };
