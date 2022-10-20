@@ -20,7 +20,7 @@ height: 50vh;
 .title{
     position: absolute;
     top: 200px;
-    left: 225px;
+    left: 190px;
     transition: all 0.5s ease-out;
     font-size: 130px;
     font-family: Orbitron;
