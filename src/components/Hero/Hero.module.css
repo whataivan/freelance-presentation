@@ -1,6 +1,7 @@
 .hero{
     position: relative;
     /* width: 100vw; */
+    background-attachment:fixed;
     height: 100vh;
     display: flex;
     align-items: flex-start;

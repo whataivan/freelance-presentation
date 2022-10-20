@@ -10,7 +10,7 @@ export const About = ({yOffset}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [imageClass, setImageClass] = useState(0);
-  
+  const [cursorVisible, setCursorVisible] = useState(true);
   
   
   useEffect(() => {
@@ -88,9 +88,7 @@ export const About = ({yOffset}) => {
     //style={{ transform:`translateY(-${yOffset/10}vh)`,overflow:'hidden' }}
     <div   className={switchClassName()}>
       <div className={switchImageClass()}> 
-      <svg className={css.cursorIcon} data-aos="fade-right" data-aos-delay={3000}>
-              <use href={`${svg}#icon-cursor`} />
-            </svg>
+      
         {content.map(({ title, id }) => {
           return (
             <p data-aos="fade-right"
@@ -111,6 +109,9 @@ export const About = ({yOffset}) => {
               }}
               className={css.title}
             >
+              <svg className={css.cursorIcon} data-aos="fade-right" data-aos-delay={3000}>
+              <use href={`${svg}#icon-cursor`} />
+            </svg>
               {/* <div className={css.timeline}></div> */}
               {title}
             </p>
