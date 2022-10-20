@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  position: relative;
   background-color: #a64444;
   overflow: 'scroll';
   height: 100vh;
@@ -147,9 +148,10 @@
     bottom: -2px;
    left: 0px;
     border-bottom: 2px solid rgb(255, 255, 255);
-    animation: border 0.3s linear 0s 1  ;
+    animation: translate 0.3s linear 0s 1  ;
 }
 .rightSide {
+  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,7 +173,19 @@ height: 100%;
   color: white;
   transition: all 0.3s linear;
 }
-@keyframes border {
+.cursorIcon{
+position: absolute;
+fill: black;
+width: 25px;
+height: 25px;
+animation-name: cursor;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.50, 0.75);
+z-index: 20;
+}
+@keyframes translate {
     
   0% {
    left: -100%; 
@@ -184,5 +198,17 @@ height: 100%;
   }
   100% {
     left: 0px; 
+  }
+}
+@keyframes cursor {
+    
+  0% {
+    top:200px;
+    left:500px;
+  }
+  
+  100% {
+    top:270px;
+left:375px; 
   }
 }

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import css from './About.module.css';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css'; //
+import svg from '../../images/symbol-defs.svg';
 // import { Parallax } from 'react-parallax'
 
 
@@ -88,6 +88,9 @@ export const About = ({yOffset}) => {
     //style={{ transform:`translateY(-${yOffset/10}vh)`,overflow:'hidden' }}
     <div   className={switchClassName()}>
       <div className={switchImageClass()}> 
+      <svg className={css.cursorIcon} data-aos="fade-right" data-aos-delay={3000}>
+              <use href={`${svg}#icon-cursor`} />
+            </svg>
         {content.map(({ title, id }) => {
           return (
             <p data-aos="fade-right"

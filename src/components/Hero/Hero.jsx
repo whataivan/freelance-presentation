@@ -2,7 +2,8 @@ import css from './Hero.module.css';
 
 export const Hero = ({yOffset}) => {
   return (
-    <div style={{ opacity: 1000/yOffset}} className={css.hero}>
+    // style={{ opacity: 100/yOffset}}
+    <div  className={css.hero}>
       <div className={css.topSide}>
         <h1
           data-aos="fade-top"
@@ -23,6 +24,9 @@ export const Hero = ({yOffset}) => {
         >
           Web-developer
         </h2>
+      </div>
+      <div className={css.bottomSide}>
+        <div>Получить консултацию</div>
       </div>
     </div>
   );
