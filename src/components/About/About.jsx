@@ -106,10 +106,11 @@ export const About = ({yOffset}) => {
                 setImageClass(id);
                 setCurrentIndex(id);
                 setCurrentText(textArr[id - 1]);
+                setCursorVisible(false)
               }}
               className={css.title}
             >
-              <svg className={css.cursorIcon} data-aos="fade-right" data-aos-delay={3000}>
+              <svg className={cursorVisible?css.cursorIcon:css.cursorIconHidden}  data-aos="fade-right" data-aos-delay={3000}>
               <use href={`${svg}#icon-cursor`} />
             </svg>
               {/* <div className={css.timeline}></div> */}

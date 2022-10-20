@@ -182,7 +182,10 @@
   animation-timing-function: cubic-bezier(0.25, 0.25, 0.5, 0.75);
   z-index: 20;
 }
-
+.cursorIconHidden{
+  display: none;
+  animation: none;
+}
 @keyframes translate {
   0% {
     left: -100%;
