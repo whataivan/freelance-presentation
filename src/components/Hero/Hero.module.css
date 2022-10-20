@@ -18,7 +18,7 @@
   left: 0;
   background-attachment: fixed;
   width: 100%;
-  /* height: auto; */
+  height: auto;
   z-index: 1;
 }
 .leftSide {
@@ -63,7 +63,7 @@
 .subTitle {
   z-index: 5;
   position: absolute;
-  top: 400px;
+  top: 350px;
   left: 110px;
   font-size: 90px;
   transition: all 0.3s ease-in;
