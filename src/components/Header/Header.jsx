@@ -1,5 +1,5 @@
 import css from './Header.module.css';
-import svg from '../../images/symbol-defs.svg';
+// import svg from '../../images/symbol-defs.svg';
 
 
 
