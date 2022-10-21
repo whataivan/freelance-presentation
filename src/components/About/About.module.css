@@ -125,8 +125,10 @@
   width: fit-content;
   color: white;
   font-size: 110px;
+  font-weight: 200;
   border-bottom: 2px solid black;
   transition: color 0.2s linear;
+  margin-left: 15px;
 }
 
 .title:nth-child(0){
@@ -165,7 +167,7 @@
   font-weight: 500;
   font-size: 18px;
   width: 450px;
-  /* width: 400px; */
+  
   color: white;
   transition: all 0.3s linear;
 }

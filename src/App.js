@@ -2,7 +2,7 @@ import { About } from './components/About/About';
 import './App.css';
 // import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { Header } from 'components/Header/Header';
-
+import { Socials } from 'components/Socials/Socials';
 import { Hero } from 'components/Hero/Hero';
 
 
@@ -24,11 +24,12 @@ export function App() {
 
   return (
     <div className='container'>
+      <Socials yOffset={yOffset}  />
       <Header yOffset={yOffset} />
       <Hero yOffset={yOffset} />
       <About yOffset={yOffset} />
 
-      <About yOffset={yOffset}  />
+      {/* <About yOffset={yOffset}  /> */}
 
       {/* <Video/> */}
       

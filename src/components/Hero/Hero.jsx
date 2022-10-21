@@ -1,5 +1,5 @@
 import css from './Hero.module.css';
-import { Socials } from 'components/Socials/Socials';
+// import { Socials } from 'components/Socials/Socials';
 import { useEffect, useRef } from 'react';
 // import video from '../../video/video.mp4'
 import videoTwo from '../../video/city2.mp4'
@@ -21,7 +21,7 @@ export const Hero = ({yOffset}) => {
   return (
     // style={{ opacity: 100/yOffset}}
     <div  className={css.hero}>
-      <Socials yOffset={yOffset}  />
+      {/* <Socials yOffset={yOffset}  /> */}
     <video src={videoTwo} ref={vidRef}  onClick={handlePlayVideo} type="video/mp4" className={css.video} autoplay muted loop id="myVideo">
        </video>
       <div className={css.leftSide}>

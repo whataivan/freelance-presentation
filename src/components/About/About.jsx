@@ -75,7 +75,7 @@ export const About = ({ yOffset }) => {
     { title: 'Быстро', id: 1 },
     { title: 'Качественно', id: 2 },
     { title: 'Дешево', id: 3 },
-    { title: 'Красиво', id: 4 },
+    { title: 'Привлекательно', id: 4 },
   ];
   AOS.init();
 
@@ -86,7 +86,8 @@ export const About = ({ yOffset }) => {
       <div className={switchImageClass()}>
         {content.map(({ title, id }) => {
           return (
-            <p
+            <h2
+            className={css.title}
               data-aos="fade-top"
               // data-aos-anchor-placement="bottom-bottom"
               data-aos-delay={id * 100}
@@ -107,7 +108,7 @@ export const About = ({ yOffset }) => {
                 setCurrentText(textArr[id - 1]);
                 setCursorVisible(false);
               }}
-              className={css.title}
+              
             >
               {id === 1 && (
                 <svg
@@ -123,7 +124,7 @@ export const About = ({ yOffset }) => {
 
               {/* <div className={css.timeline}></div> */}
               {title}
-            </p>
+            </h2>
           );
         })}
       </div>
