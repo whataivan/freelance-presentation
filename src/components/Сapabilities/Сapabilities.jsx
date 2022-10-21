@@ -3,7 +3,7 @@ import svg from '../../images/symbol-defs.svg';
 import { useState } from 'react';
 
 export const Сapabilities = () => {
-  const [leftActive, setLeftActive] = useState(false);
+//   const [leftActive, setLeftActive] = useState(false);
   const [rightActive, setRightActive] = useState(false);
   return (
     <div className={css.capabilities}>
