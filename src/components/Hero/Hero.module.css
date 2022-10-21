@@ -58,8 +58,13 @@
   transition: all 0.5s ease-out;
   font-size: 130px;
   font-family: Orbitron;
-  /* font-family: Caveat; */
+  
   color: #ffffff;
+  animation-name: color;
+  
+  animation-duration: 15s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.25, 0.25);
 }
 .subTitle {
   z-index: 5;
@@ -72,4 +77,13 @@
   /* font-family: Caveat; */
   color: #c9b374;
 }
-
+@keyframes color {
+  0%{
+    color: #010904;
+    
+  }
+  100%{
+    color: white;
+    
+  }
+}
