@@ -93,7 +93,7 @@ export const About = ({ yOffset }) => {
               data-aos-duration="700"
               style={{
                 transform:
-                  yOffset > 700 ? `translateX(0)` : `translateX(-800px)`,
+                  yOffset > 600 ? `translateX(0)` : `translateX(-800px)`,
               }}
               onMouseLeave={() => {
                 setCurrentIndex(0);
