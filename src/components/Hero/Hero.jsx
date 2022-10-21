@@ -32,7 +32,7 @@ export const Hero = ({yOffset}) => {
 
       </div>
       <div data-aos="fade-left"
-        
+          style={{ transform: yOffset>50?`translateX(700px)`:`translateX(0)` }}
           data-aos-duration="1000"  className={css.rightSide}> 
       
       </div>
@@ -41,13 +41,13 @@ export const Hero = ({yOffset}) => {
         //   data-aos-delay={500}
           data-aos-duration="1000"
           className={css.title}
-          style={{ transform: yOffset>50?`translateX(-700px)`:`translateX(0)` }}
+          style={{ transform: yOffset>50?`translateX(-1000px)`:`translateX(0)` }}
           // style={{ transform: `translateX(-${yOffset}px) `,  }}
         >
           Ivan Pikun
         </h1>
         <h2
-        style={{ transform: yOffset>50?`translateX(700px)`:`translateX(0)` }} 
+        style={{ transform: yOffset>50?`translateX(-1500px)`:`translateX(0)` }} 
           data-aos="fade-right"
        
           data-aos-duration="1000"

@@ -91,11 +91,11 @@ export const About = ({yOffset}) => {
       
         {content.map(({ title, id }) => {
           return (
-            <p data-aos="fade-right"
-            data-aos-anchor-placement="bottom-bottom"
+            <p data-aos="fade-top"
+            // data-aos-anchor-placement="bottom-bottom"
             data-aos-delay={id*100}
             data-aos-duration="700"
-              
+            style={{ transform: yOffset>800?`translateX(0)`:`translateX(-800px)` }}
               onMouseLeave={() => {
                 setCurrentIndex(0);
                 setCurrentText('');
