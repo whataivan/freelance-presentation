@@ -5,22 +5,18 @@ import 'aos/dist/aos.css'; //
 import svg from '../../images/symbol-defs.svg';
 // import { Parallax } from 'react-parallax'
 
-
-export const About = ({yOffset}) => {
+export const About = ({ yOffset }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [imageClass, setImageClass] = useState(0);
   const [cursorVisible, setCursorVisible] = useState(true);
-  
-  
+
   useEffect(() => {
     switchClassName();
-    
-    
-    
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex, yOffset]);
- 
+
   let delay = 0;
   console.log(delay);
   const switchClassName = () => {
@@ -82,20 +78,23 @@ export const About = ({yOffset}) => {
     { title: 'Красиво', id: 4 },
   ];
   AOS.init();
-  
+
   return (
     // <Parallax></Parallax>
     //style={{ transform:`translateY(-${yOffset/10}vh)`,overflow:'hidden' }}
-    <div   className={switchClassName()}>
-      <div className={switchImageClass()}> 
-      
+    <div className={switchClassName()}>
+      <div className={switchImageClass()}>
         {content.map(({ title, id }) => {
           return (
-            <p data-aos="fade-top"
-            // data-aos-anchor-placement="bottom-bottom"
-            data-aos-delay={id*100}
-            data-aos-duration="700"
-            style={{ transform: yOffset>800?`translateX(0)`:`translateX(-800px)` }}
+            <p
+              data-aos="fade-top"
+              // data-aos-anchor-placement="bottom-bottom"
+              data-aos-delay={id * 100}
+              data-aos-duration="700"
+              style={{
+                transform:
+                  yOffset > 700 ? `translateX(0)` : `translateX(-800px)`,
+              }}
               onMouseLeave={() => {
                 setCurrentIndex(0);
                 setCurrentText('');
@@ -106,13 +105,22 @@ export const About = ({yOffset}) => {
                 setImageClass(id);
                 setCurrentIndex(id);
                 setCurrentText(textArr[id - 1]);
-                setCursorVisible(false)
+                setCursorVisible(false);
               }}
               className={css.title}
             >
-              <svg className={cursorVisible?css.cursorIcon:css.cursorIconHidden}  data-aos="fade-right" data-aos-delay={3000}>
-              <use href={`${svg}#icon-cursor`} />
-            </svg>
+              {id === 1 && (
+                <svg
+                  className={
+                    cursorVisible ? css.cursorIcon : css.cursorIconHidden
+                  }
+                  data-aos="fade-right"
+                  data-aos-delay={3000}
+                >
+                  <use href={`${svg}#icon-cursor`} />
+                </svg>
+              )}
+
               {/* <div className={css.timeline}></div> */}
               {title}
             </p>
