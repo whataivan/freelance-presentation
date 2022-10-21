@@ -4,7 +4,7 @@ import './App.css';
 import { Header } from 'components/Header/Header';
 import { Socials } from 'components/Socials/Socials';
 import { Hero } from 'components/Hero/Hero';
-
+import {Сapabilities} from './components/Сapabilities/Сapabilities'
 
 import { useEffect, useState } from 'react';
 
@@ -28,7 +28,7 @@ export function App() {
       <Header yOffset={yOffset} />
       <Hero yOffset={yOffset} />
       <About yOffset={yOffset} />
-
+      <Сapabilities/>
       {/* <About yOffset={yOffset}  /> */}
 
       {/* <Video/> */}

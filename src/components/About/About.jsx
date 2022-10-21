@@ -88,7 +88,7 @@ export const About = ({ yOffset }) => {
           return (
             <h2
             className={css.title}
-              data-aos="fade-top"
+              data-aos="fade"
               // data-aos-anchor-placement="bottom-bottom"
               data-aos-delay={id * 100}
               data-aos-duration="700"

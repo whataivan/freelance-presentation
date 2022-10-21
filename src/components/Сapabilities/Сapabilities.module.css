@@ -1,0 +1,52 @@
+.capabilities {
+    display: flex;
+  /* width: 100vw; */
+  height: 100vh;
+}
+.leftSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  width: 52.5%;
+  background-color: #a64444; 
+}
+.rightSide {
+    box-shadow: inset 0px 0px 10px 2px #a64444;
+    height: 100%;
+    width: 47.5%;
+    background-color: black; 
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.title{
+    position: relative;
+    font-size: 75px;
+    cursor: pointer;
+    
+}
+.titleSecond{
+    position: relative;
+    color: #a64444;
+    font-size: 75px;
+}
+
+.icon{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 120px;
+    fill: black;
+    width: 150px;
+    height: 150px;
+}
+.iconSecond{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 120px;
+    width: 130px;
+    height: 130px;
+    fill: #a64444;
+}

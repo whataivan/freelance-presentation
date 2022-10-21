@@ -33,7 +33,7 @@ export const Hero = ({yOffset}) => {
       </div>
       <div data-aos="fade-left"
           style={{ transform: yOffset>50?`translateX(700px)`:`translateX(0)` }}
-          data-aos-duration="1000"  className={css.rightSide}> 
+          data-aos-duration="1500"  className={css.rightSide}> 
       
       </div>
         <h1
