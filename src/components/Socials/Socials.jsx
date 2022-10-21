@@ -1,35 +1,36 @@
 import css from './Socials.module.css';
 import svg from '../../images/symbol-defs.svg';
-export const Socials = ({ yOffset }) => {
-  const setIconStyle = id => {
-    const styleObj = { fill: '' };
-    if (id === 1) {
-      if (yOffset < 615) {
-        styleObj.fill = '#e3d324';
-      } else if (yOffset >= 615 && yOffset < 1615) {
-        styleObj.fill = 'white';
-      } else if (yOffset >= 1615) {
-        styleObj.fill = '#a64444';
-      }
-    } else if (id === 2) {
-      if (yOffset < 515) {
-        styleObj.fill = '#e3d324';
-      } else if (yOffset >= 515 && yOffset < 1515) {
-        styleObj.fill = 'white';
-      } else if (yOffset >= 1515) {
-        styleObj.fill = '#a64444';
-      }
-    } else {
-      if (yOffset < 415) {
-        styleObj.fill = '#e3d324';
-      } else if (yOffset >= 415 && yOffset < 1415) {
-        styleObj.fill = 'white';
-      } else if (yOffset >= 1415) {
-        styleObj.fill = '#a64444';
-      }
-    }
-    return styleObj
-  };
+export const Socials = ({yOffset}) => {
+
+  // const setIconStyle = id => {
+  //   const styleObj = { fill: '' };
+  //   if (id === 1) {
+  //     if (yOffset < 615) {
+  //       styleObj.fill = '#e3d324';
+  //     } else if (yOffset >= 615 && yOffset < 1615) {
+  //       styleObj.fill = 'white';
+  //     } else if (yOffset >= 1615) {
+  //       styleObj.fill = '#a64444';
+  //     }
+  //   } else if (id === 2) {
+  //     if (yOffset < 515) {
+  //       styleObj.fill = '#e3d324';
+  //     } else if (yOffset >= 515 && yOffset < 1515) {
+  //       styleObj.fill = 'white';
+  //     } else if (yOffset >= 1515) {
+  //       styleObj.fill = '#a64444';
+  //     }
+  //   } else {
+  //     if (yOffset < 415) {
+  //       styleObj.fill = '#e3d324';
+  //     } else if (yOffset >= 415 && yOffset < 1415) {
+  //       styleObj.fill = 'white';
+  //     } else if (yOffset >= 1415) {
+  //       styleObj.fill = '#a64444';
+  //     }
+  //   }
+  //   return styleObj
+  // };
   return (
     <div
       className={css.socials}
@@ -42,7 +43,7 @@ export const Socials = ({ yOffset }) => {
         <li className={css.item}>
           {' '}
           <a className={css.link} href="https://www.instagram.com/whataivan/">
-            <svg style={setIconStyle(1)} className={css.icon}>
+            <svg style={{ fill:yOffset<615? '#e3d324':'white' }} className={css.icon}>
               <use href={`${svg}#icon-instagram`} />
             </svg>
           </a>
@@ -50,10 +51,7 @@ export const Socials = ({ yOffset }) => {
         <li className={css.item}>
           {' '}
           <a className={css.link} href="https://www.instagram.com/whataivan/">
-            <svg
-              style={setIconStyle(2)}
-              className={css.icon}
-            >
+            <svg style={{ fill:yOffset<515? '#e3d324':'white' }} className={css.icon}>
               <use href={`${svg}#icon-telegram`} />
             </svg>
           </a>
@@ -61,10 +59,7 @@ export const Socials = ({ yOffset }) => {
         <li className={css.item}>
           {' '}
           <a className={css.link} href="https://www.instagram.com/whataivan/">
-            <svg
-              style={setIconStyle(3)}
-              className={css.icon}
-            >
+            <svg style={{ fill:yOffset<415? '#e3d324':'white' }} className={css.icon}>
               <use href={`${svg}#icon-github`} />
             </svg>
           </a>
