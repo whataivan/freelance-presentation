@@ -61,14 +61,14 @@
 .title {
   z-index: 5;
   position: absolute;
-  top: 200px;
+  top: 300px;
   left: 135px;
   transition: all 0.5s ease-out;
   font-size: 130px;
   font-family: Orbitron;
   /* font-family: Caveat; */
   color: #ffffff;
-  animation-name: color;
+  /* animation-name: color; */
   animation-delay: 0s;
   animation-duration: 15s;
   animation-iteration-count: 1;
@@ -77,7 +77,7 @@
 .subTitle {
   z-index: 5;
   position: absolute;
-  top: 350px;
+  top: 450px;
   left: 110px;
   font-size: 90px;
   transition: all 0.3s ease-in;

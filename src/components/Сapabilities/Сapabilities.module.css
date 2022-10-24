@@ -2,6 +2,7 @@
     display: flex;
   /* width: 100vw; */
   height: 100vh;
+  overflow: hidden;
 }
 .leftSide {
     display: flex;
@@ -15,8 +16,9 @@
     /* box-shadow:  -2px 0px 5px 0px black; */
     height: 100%;
     width: 50%;
-    background-color: black; 
+     
     background: url('https://cdn.pixabay.com/photo/2016/11/23/15/31/man-1853545_960_720.jpg');
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;  

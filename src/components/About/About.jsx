@@ -8,7 +8,7 @@ import slideOne from '../../images/night.JPG';
 import slideTwo from '../../images/guitar.JPG';
 import slideThree from '../../images/bas2.JPG';
 import slideFour from '../../images/bauty.JPG';
-// import { Parallax } from 'react-parallax'
+import { Parallax } from 'react-scroll-parallax';
 
 export const About = ({ yOffset }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,9 +67,10 @@ export const About = ({ yOffset }) => {
   AOS.init();
 
   return (
-    // <Parallax></Parallax>
-    //style={{ transform:`translateY(-${yOffset/10}vh)`,overflow:'hidden' }}
+    
+    <Parallax  strength={300} opacity={[0.3,2]}>
     <div className={switchClassName()}>
+      
       <motion.div
         className={css.leftSide}
         initial={{ opacity: 0 }}
@@ -92,7 +93,7 @@ export const About = ({ yOffset }) => {
             <h2
               className={css.title}
               data-aos="fade"
-              // data-aos-anchor-placement="bottom-bottom"
+              
               data-aos-delay={id * 100}
               data-aos-duration="700"
               style={{
@@ -145,5 +146,6 @@ export const About = ({ yOffset }) => {
         {/* </AnimatePresence> */}
       </div>
     </div>
+    </Parallax>
   );
 };

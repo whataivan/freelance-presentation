@@ -5,9 +5,10 @@ import { Header } from 'components/Header/Header';
 import { Socials } from 'components/Socials/Socials';
 import { Hero } from 'components/Hero/Hero';
 import {Сapabilities} from './components/Сapabilities/Сapabilities'
-import { Par } from 'components/Par/Par';
+// import { Par } from 'components/Par/Par';
 import { useEffect, useState } from 'react';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { Portfolio } from 'components/Portfolio/Portfolio';
 
 //-----------------------------------------------------------------------------------
 export function App() {
@@ -23,6 +24,7 @@ export function App() {
   }, [yOffset]);
 
   return (
+    <ParallaxProvider>
     <div className='container'>
       <Socials yOffset={yOffset}  />
       <Header yOffset={yOffset} />
@@ -33,8 +35,9 @@ export function App() {
 
       {/* <Video/> */}
       
-<Par/>
+<Portfolio/>
     </div>
+    </ParallaxProvider>
   );
 }
 

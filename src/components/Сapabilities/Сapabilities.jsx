@@ -1,11 +1,14 @@
 import css from './Сapabilities.module.css';
 import svg from '../../images/symbol-defs.svg';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Parallax } from 'react-scroll-parallax';
 // import th from "../../images/light.png"
 export const Сapabilities = () => {
 //   const [leftActive, setLeftActive] = useState(false);
   const [rightActive, setRightActive] = useState(false);
   return (
+    <Parallax  opacity={[0.3,2]}>
     <div className={css.capabilities}>
       <div className={css.leftSide}>
         {/* <img src={th} alt="" /> */}
@@ -18,9 +21,13 @@ export const Сapabilities = () => {
       </div>
       <div className={css.rightSide}>
         {rightActive ? (
-          <p className={css.rightSideText}>wdqSDSdsfsdfszdfs sSSWFVD dfdddd </p>
+          <motion.p className={css.rightSideText}
+          initial={{ opacity: 0,scale:0,originZ: 0.5 }}
+        animate={{ opacity: 1 ,scale:1, originZ: 1 }}>wdqSDSdsfsdfszdfs sSSWFVD dfdddd </motion.p>
         ) : (
-          <h3 className={css.titleSecond}>
+          <h3 className={css.titleSecond} initial={{ opacity: 0,scale:0,originZ: 0.5 }}
+          animate={{ opacity: 1 ,scale:1, originZ: 1 }}
+          key={rightActive}>
             <svg className={css.iconSecond}>
               <use href={`${svg}#icon-cross`}/>
             </svg>
@@ -29,5 +36,6 @@ export const Сapabilities = () => {
         )}
       </div>
     </div>
+    </Parallax>
   );
 };
