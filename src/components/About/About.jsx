@@ -1,24 +1,33 @@
 import { useEffect, useState } from 'react';
 import css from './About.module.css';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; //
+import 'aos/dist/aos.css'; 
 import svg from '../../images/symbol-defs.svg';
+import { motion, AnimatePresence, useScroll,  useVelocity } from 'framer-motion';
+import slideOne from '../../images/night.JPG';
+import slideTwo from '../../images/guitar.JPG';
+import slideThree from '../../images/bas2.JPG';
+import slideFour from '../../images/bauty.JPG';
 // import { Parallax } from 'react-parallax'
 
 export const About = ({ yOffset }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
-  const [imageClass, setImageClass] = useState(0);
+  
   const [cursorVisible, setCursorVisible] = useState(true);
-
+  const [imgToView, setImgToView] = useState(null);
+  const { scrollY } = useScroll()
+  // const scaleX = useSpring(scrollYProgress)
+  const scrollVelocity = useVelocity(scrollY);
   useEffect(() => {
+    console.log(scrollVelocity);
     switchClassName();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex, yOffset]);
 
-  let delay = 0;
-  console.log(delay);
+
+  
   const switchClassName = () => {
     let resultClass;
     switch (currentIndex) {
@@ -42,29 +51,7 @@ export const About = ({ yOffset }) => {
     }
     return resultClass;
   };
-  const switchImageClass = () => {
-    let resultClass;
-    switch (imageClass) {
-      case 0:
-        resultClass = css.leftSide;
-        break;
-      case 1:
-        resultClass = css.leftSideFirst;
-        break;
-      case 2:
-        resultClass = css.leftSideTwo;
-        break;
-      case 3:
-        resultClass = css.leftSideThree;
-        break;
-      case 4:
-        resultClass = css.leftSideFour;
-        break;
-      default:
-        break;
-    }
-    return resultClass;
-  };
+  
   const textArr = [
     'Быстро реализую вашу задумку, в отличии от крупных компаний, в моей работе отсутствуюет бюрократия, решение не проходит несколько этапов, чтобы попасть в точку назначения и быть реализованым. Нужно что-то поменять? Просто напишите мне и в скором времени будет готово.',
     'Все основные задачи, и так же мелочи будут реализованы в точном соответствии с вашим запросом. Опыт решения разнообразных задач  позволит мне решать ваши поставленные цели, в соответствии с актуальными трендами разработки. Проект пишется структурированно и семантично, это позволит в случае необходимости расширить функционал, ведь структура и код максимально понятны.',
@@ -72,10 +59,10 @@ export const About = ({ yOffset }) => {
     'Сделаю "Вау" еффект, взаимодействие с сайтом, плавные переходы, анимации и оформление заставят вашего клиента остаться подольше и оставить заявку. Подберу картинки и декоративные элементы оформления под тематику вашего продукта. В конечном итоге ваш сайт будет выглядеть красиво и гармонично. ',
   ];
   const content = [
-    { title: 'Быстро', id: 1 },
-    { title: 'Качественно', id: 2 },
-    { title: 'Дешево', id: 3 },
-    { title: 'Привлекательно', id: 4 },
+    { title: 'Быстро', id: 1, img: slideOne },
+    { title: 'Качественно', id: 2, img: slideTwo },
+    { title: 'Дешево', id: 3, img: slideThree },
+    { title: 'Привлекательно', id: 4, img: slideFour },
   ];
   AOS.init();
 
@@ -83,11 +70,27 @@ export const About = ({ yOffset }) => {
     // <Parallax></Parallax>
     //style={{ transform:`translateY(-${yOffset/10}vh)`,overflow:'hidden' }}
     <div className={switchClassName()}>
-      <div className={switchImageClass()}>
-        {content.map(({ title, id }) => {
+      <motion.div
+        className={css.leftSide}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <AnimatePresence>
+        <motion.img
+          className={css.image}
+          src={imgToView}
+          initial={{ opacity:  0, y:-500 }}
+          animate={{ opacity: 0.3 , y:0}}
+          exit={{ opacity: 0 , y:500 }}
+          transition={{ duration: '0.5' }}
+          key={imgToView}
+          alt="about_bg"
+        />
+        </AnimatePresence>
+        {content.map(({ title, id, img }) => {
           return (
             <h2
-            className={css.title}
+              className={css.title}
               data-aos="fade"
               // data-aos-anchor-placement="bottom-bottom"
               data-aos-delay={id * 100}
@@ -99,16 +102,15 @@ export const About = ({ yOffset }) => {
               onMouseLeave={() => {
                 setCurrentIndex(0);
                 setCurrentText('');
-                setImageClass(0);
+                setImgToView(null);
               }}
               key={id}
               onMouseMove={() => {
-                setImageClass(id);
+                setImgToView(img);
                 setCurrentIndex(id);
                 setCurrentText(textArr[id - 1]);
                 setCursorVisible(false);
               }}
-              
             >
               {id === 1 && (
                 <svg
@@ -127,9 +129,20 @@ export const About = ({ yOffset }) => {
             </h2>
           );
         })}
-      </div>
+      </motion.div>
       <div className={css.rightSide}>
-        <p className={css.rightSideText}>{currentText}</p>
+        {/* <AnimatePresence> */}
+        <motion.p
+          className={css.rightSideText}
+          initial={{  opacity: 0 }}
+          transition={{ duration: '0.4' }}
+          key={currentText}
+          animate={{  opacity: 1 }}
+          // exit={{ opacity:0 }}
+        >
+          {currentText}
+        </motion.p>
+        {/* </AnimatePresence> */}
       </div>
     </div>
   );

@@ -12,7 +12,7 @@
   background-color: #a64444; 
 }
 .rightSide {
-    box-shadow:  0px -2px 5px 0px black;
+    /* box-shadow:  -2px 0px 5px 0px black; */
     height: 100%;
     width: 50%;
     background-color: black; 

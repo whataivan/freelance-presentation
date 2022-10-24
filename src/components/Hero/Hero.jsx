@@ -25,10 +25,10 @@ export const Hero = ({ yOffset }) => {
         onClick={handlePlayVideo}
         type="video/mp4"
         className={css.video}
-        autoplay
+        autoPlay
         muted
         loop
-        id="myVideo"
+        
       />
       <div className={css.leftSide}></div>
       <div

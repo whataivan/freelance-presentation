@@ -5,7 +5,7 @@ import { Header } from 'components/Header/Header';
 import { Socials } from 'components/Socials/Socials';
 import { Hero } from 'components/Hero/Hero';
 import {Сapabilities} from './components/Сapabilities/Сapabilities'
-
+import { Par } from 'components/Par/Par';
 import { useEffect, useState } from 'react';
 
 
@@ -33,7 +33,7 @@ export function App() {
 
       {/* <Video/> */}
       
-
+<Par/>
     </div>
   );
 }
