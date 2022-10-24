@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/freelance-presentation/static/css/main.44d7126d.css",
-    "main.js": "/freelance-presentation/static/js/main.0d6f20c4.js",
+    "main.css": "/freelance-presentation/static/css/main.237fb737.css",
+    "main.js": "/freelance-presentation/static/js/main.c0b32f0b.js",
     "static/media/city2.mp4": "/freelance-presentation/static/media/city2.757a3bc73ff401f58418.mp4",
     "static/media/bauty.JPG": "/freelance-presentation/static/media/bauty.e016b679a44c2f3ad023.JPG",
     "static/media/bas2.JPG": "/freelance-presentation/static/media/bas2.22a28fbfb900b8b19692.JPG",
     "static/media/night.JPG": "/freelance-presentation/static/media/night.e7ed9ec09a76164c5fbc.JPG",
+    "static/media/target.JPG": "/freelance-presentation/static/media/target.10ff910628fe7c5104f3.JPG",
     "static/media/guitar.JPG": "/freelance-presentation/static/media/guitar.fd466de9b8f81248ad08.JPG",
+    "static/media/helleng.jpg": "/freelance-presentation/static/media/helleng.c91e3f9beafd770b056b.jpg",
+    "static/media/filmoteka.jpg": "/freelance-presentation/static/media/filmoteka.e605378605e574bf0e63.jpg",
     "static/media/symbol-defs.svg": "/freelance-presentation/static/media/symbol-defs.1edd1ef4ded0b602cccec5463eebfa87.svg",
+    "static/media/kapusta.jpg": "/freelance-presentation/static/media/kapusta.33079b1966512d2aef0c.jpg",
     "index.html": "/freelance-presentation/index.html",
-    "main.44d7126d.css.map": "/freelance-presentation/static/css/main.44d7126d.css.map",
-    "main.0d6f20c4.js.map": "/freelance-presentation/static/js/main.0d6f20c4.js.map"
+    "main.237fb737.css.map": "/freelance-presentation/static/css/main.237fb737.css.map",
+    "main.c0b32f0b.js.map": "/freelance-presentation/static/js/main.c0b32f0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.44d7126d.css",
-    "static/js/main.0d6f20c4.js"
+    "static/css/main.237fb737.css",
+    "static/js/main.c0b32f0b.js"
   ]
 }
