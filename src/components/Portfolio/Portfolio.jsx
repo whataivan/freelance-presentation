@@ -21,14 +21,44 @@ export const Portfolio = () => {
   return (
     <div className={css.portfolio}>
       <h3 className={css.title}>Мои работы</h3>
-      <AnimatePresence>
-      <motion.div className={css.headImgWrap}  >
-        <h4 className={css.currentTitle}>{currentSlideName}</h4>
-        <motion.img transition={{duration:0.9}} initial={{y:500, opacity:0}} animate={{y:0, opacity:1}} exit={{x:500, opacity:0.3}} key={currentImage} className={css.headImg} src={currentImage} alt="site" />
-        <a className={css.primaryLink} href="фівфів">Посетить</a>
-        <a className={css.secondaryLink} href="фівфів">Смотреть код</a>
+
+      <motion.div className={css.headImgWrap}>
+        <motion.h4
+          className={css.currentTitle}
+          key={currentSlideName}
+          transition={{ duration: 1 }}
+          initial={{ y: -200, opacity: 0, x: '-50%' }}
+          animate={{ y: 0, opacity: 1, x: '-50%' }}
+        >
+          {currentSlideName}
+        </motion.h4>
+        <AnimatePresence>
+          <motion.img
+            transition={{ duration: 0.6 }}
+            initial={{ y: 500, opacity: 0, scale: 0.3 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            key={currentSlideName}
+            className={css.headImg}
+            src={currentImage}
+            alt="site"
+          />
+          <motion.div
+          className={css.linkWrap }
+            key={currentImage}
+            transition={{ duration: 1 }}
+            initial={{ x: 500, opacity: 0 }}
+            animate={{ x: 0, opacity: 1}}
+          >
+            <a className={css.link} href="фівфів">
+              Посетить
+            </a>
+            <a className={css.link} href="фівфів">
+              Смотреть код
+            </a>
+          </motion.div>
+        </AnimatePresence>
       </motion.div>
-      </AnimatePresence>
+
       <ul className={css.list}>
         {portfolioList.map(({ id, name, img }) => {
           return (

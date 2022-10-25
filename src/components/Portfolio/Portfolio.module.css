@@ -36,20 +36,16 @@
   position: absolute;
   font-weight: 300;
 }
-.primaryLink {
-  text-align: center;
-  width: 120px;
-  color: rgb(255, 255, 255);
-  background-color: #771414;
-  border-radius: 20px 0 0 20px;
-  font-size: 15px;
-  padding: 7px 15px;
-  font-weight: 400;
+.linkWrap {
   position: absolute;
-  top: 3%;
+  
+  top: 15%;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.secondaryLink {
+.link {
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: #771414;
@@ -58,9 +54,7 @@
   padding: 7px;
   width: 120px;
   font-weight: 400;
-  position: absolute;
-  top: 15%;
-  right: 0;
+  
 }
 
 .list {
@@ -74,6 +68,7 @@
   height: 100px;
   transition: all 0.3s linear;
   margin-bottom: 15px;
+  opacity: 0.5;
 }
 .itemActive {
   background: white;
@@ -81,7 +76,9 @@
   animation: pulse-white 2s infinite;
   width: 200px;
   height: 100px;
-  transform: translateY(-15px);
+  
+  transform: translateY(-15px) ;
+  opacity: 1;
   transition: all 0.3s linear;
 }
 .img {
