@@ -30,12 +30,13 @@ export function App() {
       <Header yOffset={yOffset} />
       <Hero yOffset={yOffset} />
       <About yOffset={yOffset} />
+      <Portfolio/>
       <Сapabilities/>
       {/* <About yOffset={yOffset}  /> */}
 
       {/* <Video/> */}
       
-<Portfolio/>
+
     </div>
     </ParallaxProvider>
   );

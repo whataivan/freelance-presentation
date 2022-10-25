@@ -2,13 +2,13 @@ import css from './Сapabilities.module.css';
 import svg from '../../images/symbol-defs.svg';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Parallax } from 'react-scroll-parallax';
-// import th from "../../images/light.png"
+// import { Parallax } from 'react-scroll-parallax';
+
 export const Сapabilities = () => {
 //   const [leftActive, setLeftActive] = useState(false);
   const [rightActive, setRightActive] = useState(false);
   return (
-    <Parallax  opacity={[0.3,2]}>
+    // <Parallax  opacity={[0.3,2]}>
     <div className={css.capabilities}>
       <div className={css.leftSide}>
         {/* <img src={th} alt="" /> */}
@@ -36,6 +36,6 @@ export const Сapabilities = () => {
         )}
       </div>
     </div>
-    </Parallax>
+    // </Parallax>
   );
 };

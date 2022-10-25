@@ -8,7 +8,7 @@ import slideOne from '../../images/night.JPG';
 import slideTwo from '../../images/guitar.JPG';
 import slideThree from '../../images/bas2.JPG';
 import slideFour from '../../images/bauty.JPG';
-import { Parallax } from 'react-scroll-parallax';
+// import { Parallax } from 'react-scroll-parallax';
 
 export const About = ({ yOffset }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -68,7 +68,7 @@ export const About = ({ yOffset }) => {
 
   return (
     
-    <Parallax  strength={300} opacity={[0.3,2]}>
+    // <Parallax  strength={300} opacity={[0.3,2]}>
     <div className={switchClassName()}>
       
       <motion.div
@@ -85,7 +85,7 @@ export const About = ({ yOffset }) => {
           exit={{ opacity: 0 , y:500 }}
           transition={{ duration: '0.5' }}
           key={imgToView}
-          alt="about_bg"
+          
         />
         </AnimatePresence>
         {content.map(({ title, id, img }) => {
@@ -100,11 +100,11 @@ export const About = ({ yOffset }) => {
                 transform:
                   yOffset > 600 ? `translateX(0)` : `translateX(-1000px)`,
               }}
-              onMouseLeave={() => {
-                setCurrentIndex(0);
-                setCurrentText('');
-                setImgToView(null);
-              }}
+              // onMouseLeave={() => {
+              //   setCurrentIndex(0);
+              //   setCurrentText('');
+              //   setImgToView(null);
+              // }}
               key={id}
               onMouseMove={() => {
                 setImgToView(img);
@@ -139,13 +139,13 @@ export const About = ({ yOffset }) => {
           transition={{ duration: '0.4' }}
           key={currentText}
           animate={{  opacity: 1 }}
-          // exit={{ opacity:0 }}
+          
         >
           {currentText}
         </motion.p>
         {/* </AnimatePresence> */}
       </div>
     </div>
-    </Parallax>
+    // </Parallax>
   );
 };

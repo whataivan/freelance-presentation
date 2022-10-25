@@ -8,6 +8,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 export const Portfolio = () => {
   const [currentImage, setCurrentImage] = useState(target);
+  const [currentLink, setCurrentLink] = useState({
+    visit: 'www.aleksandraskliarova.com.ua',
+    code: 'https://github.com/Jasper935/presentation_for_target-sass',
+  });
   const [currentSlideName, setCurrentSlideName] = useState(
     'Presentation for advertising'
   );
@@ -17,6 +21,28 @@ export const Portfolio = () => {
     { id: 3, name: 'Kapu$ta', img: kapusta },
     { id: 4, name: 'HellEnglish', img: helleng },
     { id: 5, name: 'My resume', img: resume },
+  ];
+  const links = [
+    {
+      visit: 'https://www.aleksandraskliarova.com.ua/',
+      code: 'https://github.com/Jasper935/presentation_for_target-sass',
+    },
+    {
+      visit: 'http://jasper935.github.io/filmoteka-project/',
+      code: 'https://github.com/Jasper935/filmoteka-project.git',
+    },
+    {
+      visit: 'https://kapusta-project-app.netlify.app/',
+      code: 'https://github.com/Jasper935/kapusta-project',
+    },
+    {
+      visit: 'https://redokleeroy.github.io/placeholders_project/',
+      code: 'https://github.com/Jasper935/hellenglish_project',
+    },
+    {
+      visit: 'https://jasper935.github.io/my-resume/',
+      code: 'https://github.com/Jasper935/my-resume',
+    },
   ];
   return (
     <div className={css.portfolio}>
@@ -35,24 +61,34 @@ export const Portfolio = () => {
         <AnimatePresence>
           <motion.img
             transition={{ duration: 0.6 }}
-            initial={{ y: 500, opacity: 0, scale: 0.3 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
+            initial={{ y: 500, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             key={currentSlideName}
             className={css.headImg}
             src={currentImage}
             alt="site"
           />
           <motion.div
-          className={css.linkWrap }
+            className={css.linkWrap}
             key={currentImage}
             transition={{ duration: 1 }}
             initial={{ x: 500, opacity: 0 }}
-            animate={{ x: 0, opacity: 1}}
+            animate={{ x: 0, opacity: 1 }}
           >
-            <a className={css.link} href="фівфів">
+            <a
+              className={css.link}
+              href={currentLink.visit}
+              target="_blank"
+              rel="noreferrer"
+            >
               Посетить
             </a>
-            <a className={css.link} href="фівфів">
+            <a
+              className={css.link}
+              href={currentLink.code}
+              target="_blank"
+              rel="noreferrer"
+            >
               Смотреть код
             </a>
           </motion.div>
@@ -66,9 +102,11 @@ export const Portfolio = () => {
               onClick={() => {
                 setCurrentImage(img);
                 setCurrentSlideName(name);
+                setCurrentLink(links[id - 1]);
               }}
               className={currentImage === img ? css.itemActive : css.item}
             >
+              <h4 className={css.bottomTitle}>{name}</h4>
               <img className={css.img} src={img} alt="expample" />
             </li>
           );
