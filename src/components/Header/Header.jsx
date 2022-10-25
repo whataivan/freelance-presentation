@@ -5,7 +5,7 @@ import css from './Header.module.css';
 
 export const Header = ({yOffset}) => {
   return (
-    <div style={ yOffset>800?{ backdropFilter: "blur(5px)",  }:{backdropFilter: "blur(5px)", } } className={css.header}>
+    <div style={ yOffset>800?{ backdropFilter: "blur(5px)",  }:{backdropFilter: "blur(5px)", } } className={css.header} id="header">
       <a href="./" className={css.logo}>
       {/* <svg  className={css.icon}>
               <use href={`${svg}#icon-head`} />
@@ -22,7 +22,7 @@ export const Header = ({yOffset}) => {
           
         </li>
         <li className={css.item}>
-          <a className={css.link} href="https://www.instagram.com/whataivan/">
+          <a className={css.link} href="#portfolio">
             Портфолио
           </a>
         </li>

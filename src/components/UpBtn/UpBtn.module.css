@@ -1,0 +1,12 @@
+
+.icon{
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    fill: white;
+    width: 25px;
+    height: 25px;
+    z-index: 0;
+    cursor: pointer;
+    z-index: 250;
+}

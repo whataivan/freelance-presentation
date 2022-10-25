@@ -24,7 +24,7 @@ export const Portfolio = () => {
   ];
   const links = [
     {
-      visit: 'https://www.aleksandraskliarova.com.ua/',
+      visit: 'https://www.aleksandraskliarova.com.ua',
       code: 'https://github.com/Jasper935/presentation_for_target-sass',
     },
     {
@@ -45,7 +45,7 @@ export const Portfolio = () => {
     },
   ];
   return (
-    <div className={css.portfolio}>
+    <div className={css.portfolio} id="portfolio">
       <h3 className={css.title}>Мои работы</h3>
 
       <motion.div className={css.headImgWrap}>

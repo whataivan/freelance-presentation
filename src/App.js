@@ -9,6 +9,7 @@ import {Сapabilities} from './components/Сapabilities/Сapabilities'
 import { useEffect, useState } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Portfolio } from 'components/Portfolio/Portfolio';
+import { UpBtn } from 'components/UpBtn/UpBtn';
 
 //-----------------------------------------------------------------------------------
 export function App() {
@@ -35,7 +36,7 @@ export function App() {
       {/* <About yOffset={yOffset}  /> */}
 
       {/* <Video/> */}
-      
+      <UpBtn yOffset={yOffset}/>
 
     </div>
     </ParallaxProvider>
