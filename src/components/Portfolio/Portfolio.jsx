@@ -5,6 +5,7 @@ import resume from '../../images/portfolio/resume.JPG';
 import helleng from '../../images/portfolio/helleng.jpg';
 import target from '../../images/portfolio/target.JPG';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 export const Portfolio = () => {
   const [currentImage, setCurrentImage] = useState(target);
   const [currentSlideName, setCurrentSlideName] = useState(
@@ -20,12 +21,14 @@ export const Portfolio = () => {
   return (
     <div className={css.portfolio}>
       <h3 className={css.title}>Мои работы</h3>
-      <div className={css.headImgWrap}>
+      <AnimatePresence>
+      <motion.div className={css.headImgWrap}  >
         <h4 className={css.currentTitle}>{currentSlideName}</h4>
-        <img className={css.headImg} src={currentImage} alt="site" />
+        <motion.img transition={{duration:0.9}} initial={{y:500, opacity:0}} animate={{y:0, opacity:1}} exit={{x:500, opacity:0.3}} key={currentImage} className={css.headImg} src={currentImage} alt="site" />
         <a className={css.primaryLink} href="фівфів">Посетить</a>
         <a className={css.secondaryLink} href="фівфів">Смотреть код</a>
-      </div>
+      </motion.div>
+      </AnimatePresence>
       <ul className={css.list}>
         {portfolioList.map(({ id, name, img }) => {
           return (
