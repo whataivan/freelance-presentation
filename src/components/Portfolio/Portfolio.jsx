@@ -1,7 +1,7 @@
 import css from './Portfolio.module.css';
 import kapusta from '../../images/portfolio/kapusta.jpg';
 import filmoteka from '../../images/portfolio/filmoteka.jpg';
-// import finder from '../../images/portfolio/finder.jpg';
+import resume from '../../images/portfolio/resume.JPG';
 import helleng from '../../images/portfolio/helleng.jpg';
 import target from '../../images/portfolio/target.JPG';
 import { useState } from 'react';
@@ -12,7 +12,7 @@ export const Portfolio = () => {
     { id: 2, name: 'Filmoteka', img: filmoteka },
     { id: 3, name: 'Kapu$ta', img: kapusta },
     { id: 4, name: 'HellEnglish', img: helleng },
-    { id: 5, name: 'Presentation for targeted advertising', img: target },
+    { id: 5, name: 'My resume', img: resume },
   ];
   return (
     <div className={css.portfolio}>
@@ -21,7 +21,7 @@ export const Portfolio = () => {
       <ul className={css.list}>
         {portfolioList.map(({ id, name, img }) => {
           return (
-            <li onClick={()=>setCurrentImage(img)} className={css.item}>
+            <li onClick={()=>setCurrentImage(img)} className={currentImage===img?css.itemActive:css.item}>
               <img className={css.img} src={img} alt="expample" />
             </li>
           );
