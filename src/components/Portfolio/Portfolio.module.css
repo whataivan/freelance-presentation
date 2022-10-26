@@ -25,7 +25,7 @@
   margin-bottom: 20px;
 }
 .currentTitle {
-  font-size: 20px;
+  font-size: 22px;
   padding: 0px 10px 5px 10px;
   top: 0px;
   left: 50%;
@@ -60,6 +60,25 @@
   transform: translateX(5px);
   transition: all 0.2s linear;
   background-color: black;
+}
+.info{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  background-color: #771414;
+  width: 120px;
+  height: 150px;
+  border-radius: 20px 0 0 20px;
+}
+.infoTitle{
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
 }
 .list {
   display: flex;

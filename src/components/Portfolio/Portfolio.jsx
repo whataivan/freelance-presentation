@@ -92,6 +92,10 @@ export const Portfolio = () => {
               Смотреть код
             </a>
           </motion.div>
+          <motion.div className={css.info}>
+            <h4 className={css.infoTitle}>Сделан с помощью</h4>
+            <p>asdasdasdasd</p>
+          </motion.div>
         </AnimatePresence>
       </motion.div>
 
