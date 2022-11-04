@@ -16,7 +16,7 @@ export const Portfolio = () => {
     'Presentation for advertising'
   );
   const portfolioList = [
-    { id: 1, name: 'Presentation for advertising', img: target },
+    { id: 1, name: 'aleksandraskliarova.com.ua', img: target },
     { id: 2, name: 'Filmoteka', img: filmoteka },
     { id: 3, name: 'Kapu$ta', img: kapusta },
     { id: 4, name: 'HellEnglish', img: helleng },
